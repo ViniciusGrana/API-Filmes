@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>webapi.Filmes</name>
+    </assembly>
+    <members>
+        <member name="T:webapi.Filmes.Domains.GeneroDomain">
+            <summary>
+            Classe que representa entidade(tabela) Genero
+            </summary>
+        </member>
+        <member name="T:webapi.Filmes.Interfaces.IGeneroRepository">
+            <summary>
+            Interface Responsavel pelo repostitorio GeneroRepository
+            Definir os metodos que serao implementados pelo GeneroRepository
+            </summary>
+        </member>
+        <member name="M:webapi.Filmes.Interfaces.IGeneroRepository.Cadastrar(webapi.Filmes.Domains.GeneroDomain)">
+            <summary>
+            Cadastrar um novo genero
+            </summary>
+            <param name="novoGenero"></param>
+        </member>
+        <member name="M:webapi.Filmes.Interfaces.IGeneroRepository.ListarTodos">
+            <summary>
+            Listar tdos os objetos cadastrados 
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="M:webapi.Filmes.Interfaces.IGeneroRepository.AtualizarIdCorpo(webapi.Filmes.Domains.GeneroDomain)">
+            <summary>
+            Atualizar objeto existente passando seu id pelo corpo da requisicao 
+            </summary>
+            <param name="genero">Objeto atualizado (novas informacoes)</param>
+        </member>
+        <member name="M:webapi.Filmes.Interfaces.IGeneroRepository.AtualizarIdUrl(System.Int32,webapi.Filmes.Domains.GeneroDomain)">
+            <summary>
+            Atualizar objeto existente passando seu id pela url
+            </summary>
+            <param name="id">Id do objeto que sera atualizado</param>
+            <param name="Genero">Objeto atualizado (novas informacoes)</param>
+        </member>
+        <member name="M:webapi.Filmes.Interfaces.IGeneroRepository.Deletar(System.Int32)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que sera deletado</param>
+        </member>
+        <member name="M:webapi.Filmes.Interfaces.IGeneroRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Buscar objeto atraves do seu id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto bsucado</returns>
+        </member>
+        <member name="F:webapi.Filmes.Repositories.GeneroRepository.StringConexao">
+            <summary>
+            String de conexao com banco de dados que recebe os seguintes parametros
+            Data Source : Nome do servidor 
+            Initial Catalog : Nome do banco de dados
+            Autenticacao:
+                -Windows : Integrated Security = true
+                - SqlServer: User Id = sa; Pwd = Senha
+            </summary>
+        </member>
+    </members>
+</doc>
